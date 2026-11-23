@@ -68,7 +68,7 @@ export default async function PurchasesPage({ searchParams }: { searchParams: Pr
               <td><Link href={"/purchases/" + purchase.id}><strong className="mono">{purchase.invoice_no}</strong></Link></td>
               <td>{purchase.invoice_date}</td>
               <td>{contact?.name || "—"}</td>
-              <td className="numeric"><strong>৳{Number(purchase.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></td>
+              <td className="numeric"><strong>₹{Number(purchase.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></td>
               <td><span className="status-badge">{purchase.status}</span></td>
             </tr>;
           })}</tbody></DataTable></div>

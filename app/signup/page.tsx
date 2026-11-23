@@ -6,8 +6,7 @@ export default function SignupPage() {
     <main className="auth-shell">
       <section className="auth-card wide">
         <div className="auth-brand">
-          <span className="brand-mark">P</span>
-          <span>Pomelo Inventory</span>
+          <span>NxtStock</span>
         </div>
         <p className="eyebrow">GET STARTED</p>
         <h1>Create your account</h1>

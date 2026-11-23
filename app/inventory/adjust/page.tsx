@@ -66,7 +66,7 @@ export default async function AdjustStockPage({ searchParams }: { searchParams: 
               <input name="quantity" type="number" min="0" step="0.0001" required placeholder="0" />
             </label>
             <label className="full-width">
-              Unit cost (optional, ৳)
+              Unit cost (optional, ₹)
               <input name="unit_cost" type="number" min="0" step="0.0001" placeholder="Valuation reference only" />
             </label>
             <div className="full-width form-actions">

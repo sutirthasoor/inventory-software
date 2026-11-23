@@ -154,14 +154,14 @@ export default async function InventoryPage({
           className={`tab-link ${currentTab === "stock" ? "active" : ""}`}
           href="/inventory?tab=stock"
         >
-          <span>📦 Stock on Hand</span>
+          <span>Stock on Hand</span>
           <span className="tab-badge">{totalProducts}</span>
         </Link>
         <Link
           className={`tab-link ${currentTab === "movements" ? "active" : ""}`}
           href="/inventory?tab=movements"
         >
-          <span>📑 Movement Ledger</span>
+          <span>Movement Ledger</span>
           <span className="tab-badge">{movements?.length ?? 0}</span>
         </Link>
       </div>
@@ -229,7 +229,7 @@ export default async function InventoryPage({
                         </td>
                         <td>{item.uom}</td>
                         <td className="numeric">
-                          ৳{item.retail_price.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                          ₹{item.retail_price.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </td>
                         <td className="numeric">
                           <strong>{item.quantity.toLocaleString("en-BD", { maximumFractionDigits: 4 })}</strong>
@@ -256,7 +256,7 @@ export default async function InventoryPage({
             </div>
             {!filteredStock.length && (
               <div className="empty-state">
-                <div className="empty-icon">📦</div>
+                <div className="empty-icon"></div>
                 <div>
                   <h2>No products found</h2>
                   <p>{search ? "Try a different search query." : "No inventory records found."}</p>
@@ -364,7 +364,7 @@ export default async function InventoryPage({
                         </td>
                         <td className="numeric">
                           {m.unit_cost !== null && m.unit_cost !== undefined
-                            ? `৳${Number(m.unit_cost).toLocaleString("en-BD", { minimumFractionDigits: 2 })}`
+                            ? `₹${Number(m.unit_cost).toLocaleString("en-BD", { minimumFractionDigits: 2 })}`
                             : "—"}
                         </td>
                       </tr>
@@ -375,7 +375,7 @@ export default async function InventoryPage({
             </div>
             {!movements?.length && (
               <div className="empty-state">
-                <div className="empty-icon">📑</div>
+                <div className="empty-icon"></div>
                 <div>
                   <h2>No inventory movements recorded</h2>
                   <p>Confirming purchases or sales will automatically record ledger transactions here.</p>

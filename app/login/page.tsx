@@ -21,7 +21,6 @@ export default async function LoginPage({ searchParams }: Props) {
   return (
     <main className="auth-shell">
       <section className="auth-card">
-        <div className="auth-brand"><span className="brand-mark">P</span><span>Pomelo Inventory</span></div>
         <p className="eyebrow">WELCOME BACK</p>
         <h1>Sign in</h1>
         <p className="muted">Access your inventory workspace securely.</p>

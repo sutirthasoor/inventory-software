@@ -27,7 +27,7 @@ export default async function PaymentDetailPage({
   const query = await searchParams;
   const error = query.error ? decodeURIComponent(query.error) : "";
 
-  const orgName = organization?.organization_name || "Pomelo Inventory";
+  const orgName = organization?.organization_name || "NxtStock";
 
   // Deep-link pre-selection (?target=sale:<uuid>): the allocator fills this
   // candidate first. Silently ignored when it isn't a current candidate.
@@ -326,7 +326,7 @@ export default async function PaymentDetailPage({
           <div className="summary-card">
             <span>Payment Amount</span>
             <strong>
-              ৳{Number(payment.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{Number(payment.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </strong>
           </div>
           <div className="summary-card">
@@ -414,7 +414,7 @@ export default async function PaymentDetailPage({
                         </td>
                         <td className="numeric">
                           <strong>
-                            ৳{Number(a.allocated_amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                            ₹{Number(a.allocated_amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                           </strong>
                         </td>
                       </tr>

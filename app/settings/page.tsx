@@ -78,5 +78,5 @@ function InfoItem({ label, value, wide = false, badge = false }: { label: string
   return <div className={wide ? "info-item wide" : "info-item"}><span>{label}</span>{badge ? <strong className="status-badge">{value}</strong> : <strong>{value}</strong>}</div>;
 }
 function WorkspaceError({ title, message }: { title: string; message: string }) {
-  return <main className="auth-shell"><section className="auth-card"><div className="auth-brand"><span className="brand-mark">P</span><span>Pomelo Inventory</span></div><p className="eyebrow">WORKSPACE ERROR</p><h1>{title}</h1><p className="form-error" role="alert">{message}</p><Link className="secondary-button" href="/login">Return to sign in</Link></section></main>;
+  return <main className="auth-shell"><section className="auth-card"><div className="auth-brand"><span className="brand-mark">P</span><span>NxtStock</span></div><p className="eyebrow">WORKSPACE ERROR</p><h1>{title}</h1><p className="form-error" role="alert">{message}</p><Link className="secondary-button" href="/login">Return to sign in</Link></section></main>;
 }

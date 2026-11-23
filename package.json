@@ -6,9 +6,9 @@
     "node": ">=20.9.0"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "test": "node --test tests/*.test.mjs tests/discount-calculations.mjs",
     "test:regression": "node --test tests/*.test.mjs",
     "supabase": "supabase"
@@ -17,6 +17,7 @@
     "@supabase/ssr": "0.7.0",
     "@supabase/supabase-js": "2.57.0",
     "next": "16.3.6",
+    "node-fetch": "^3.3.2",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },

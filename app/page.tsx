@@ -12,7 +12,7 @@ type TrendPoint = {
 };
 
 const money = (value: number) =>
-  `৳${value.toLocaleString("en-BD", { maximumFractionDigits: 0 })}`;
+  `₹${value.toLocaleString("en-BD", { maximumFractionDigits: 0 })}`;
 
 const number = (value: number) => value.toLocaleString("en-BD", { maximumFractionDigits: 4 });
 
@@ -540,9 +540,9 @@ export default async function DashboardPage() {
       <section className="quick-actions dashboard-quick-actions">
         <Link className="primary-button" href="/sales/new">+ New Sale Order</Link>
         <Link className="secondary-button" href="/purchases/new">+ New Purchase Bill</Link>
-        <Link className="secondary-button" href="/inventory">📦 View Warehouse Stock</Link>
-        <Link className="secondary-button" href="/accounting/payments/new">💳 Record Payment</Link>
-        <Link className="secondary-button" href="/accounting/expenses/new">📉 Record Expense</Link>
+        <Link className="secondary-button" href="/inventory">View Warehouse Stock</Link>
+        <Link className="secondary-button" href="/accounting/payments/new">Record Payment</Link>
+        <Link className="secondary-button" href="/accounting/expenses/new">Record Expense</Link>
         <Link className="secondary-button" href="/products/new">+ Add Product</Link>
         <Link className="secondary-button" href="/contacts/new">+ Add Contact</Link>
       </section>

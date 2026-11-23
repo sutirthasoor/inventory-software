@@ -55,7 +55,7 @@ export default async function NewProductPage({ searchParams }: { searchParams: P
               <label>
                 Retail price<span className="required-mark">*</span>
                 <div className="price-input">
-                  <span>৳</span>
+                  <span>₹</span>
                   <input name="retail_price" type="number" min="0" step="0.01" inputMode="decimal" placeholder="0.00" required />
                 </div>
               </label>

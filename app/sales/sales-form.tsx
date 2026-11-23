@@ -240,7 +240,7 @@ export default function SalesForm({
                     </td>
                     <td className="numeric">
                       <strong>
-                        ৳
+                        ₹
                         {lineTotal.toLocaleString("en-BD", {
                           minimumFractionDigits: 2,
                           maximumFractionDigits: 2,
@@ -275,10 +275,10 @@ export default function SalesForm({
           <div>
             <span>Subtotal</span>
             <strong>
-              ৳{subtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{subtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </strong>
           </div>
-          <div><span>Item Discounts</span><strong>− ৳{discountTotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div><span>Net Subtotal</span><strong>৳{netSubtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div><span>Overall Discount</span>
+          <div><span>Item Discounts</span><strong>− ₹{discountTotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div><span>Net Subtotal</span><strong>₹{netSubtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div><span>Overall Discount</span>
             <input
               type="number"
               min="0"
@@ -293,7 +293,7 @@ export default function SalesForm({
           <div className="purchase-grand-total">
             <span>Grand Total</span>
             <strong>
-              ৳{grandTotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{grandTotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </strong>
           </div>
         </div>

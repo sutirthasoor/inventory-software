@@ -36,12 +36,12 @@ export default function CreateOrganizationPage() {
     router.replace("/"); router.refresh();
   }
 
-  if (loading) return <main className="auth-shell"><section className="auth-card"><div className="auth-brand"><span className="brand-mark">P</span><span>Pomelo Inventory</span></div><div className="loading-state"><span className="loading-dot" /> Preparing your workspace…</div></section></main>;
+  if (loading) return <main className="auth-shell"><section className="auth-card"><div className="auth-brand"><span className="brand-mark">P</span><span>NxtStock</span></div><div className="loading-state"><span className="loading-dot" /> Preparing your workspace…</div></section></main>;
 
   return (
     <main className="auth-shell">
       <section className="auth-card wide">
-        <div className="auth-brand"><span className="brand-mark">P</span><span>Pomelo Inventory</span></div>
+        <div className="auth-brand"><span className="brand-mark">P</span><span>NxtStock</span></div>
         <p className="eyebrow">FIRST STEP</p>
         <h1>Create your organization</h1>
         <p className="muted">Set up the organization profile used by your inventory workspace. A six-digit organization number is generated automatically.</p>

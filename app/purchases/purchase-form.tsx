@@ -141,7 +141,7 @@ export default function PurchaseForm({
                       <td className="numeric"><input className="compact-number" type="number" min="0.0001" step="0.0001" value={item.quantity} onChange={(event) => updateItem(index, { quantity: Number(event.target.value) })} aria-label="Quantity" required /></td>
                       <td className="numeric"><input className="compact-number" type="number" min="0" step="0.01" value={item.unit_price} onChange={(event) => updateItem(index, { unit_price: Number(event.target.value) })} aria-label="Unit price" required /></td>
                       <td className="numeric"><input className="compact-number" type="number" min="0" step="0.01" value={item.discount} onChange={(event) => updateItem(index, { discount: Number(event.target.value) })} aria-label="Discount" /></td>
-                      <td className="numeric"><strong>৳{money(lineTotal)}</strong></td>
+                      <td className="numeric"><strong>₹{money(lineTotal)}</strong></td>
                       <td><button className="icon-button" type="button" onClick={() => removeItem(index)} disabled={items.length === 1} aria-label="Remove item">×</button></td>
                     </tr>
                   );
@@ -156,14 +156,14 @@ export default function PurchaseForm({
         </div>
 
         <div className="purchase-total-card">
-          <div><span>Subtotal</span><strong>৳{money(totals.subtotal)}</strong></div>
+          <div><span>Subtotal</span><strong>₹{money(totals.subtotal)}</strong></div>
           <div>
             <span>Item Discounts</span>
-            <strong>− ৳{money(totals.discount)}</strong>
+            <strong>− ₹{money(totals.discount)}</strong>
           </div>
           <div>
             <span>Net Subtotal</span>
-            <strong>৳{money(totals.netSubtotal)}</strong>
+            <strong>₹{money(totals.netSubtotal)}</strong>
           </div>
           <div>
             <span>Overall Discount</span>
@@ -180,7 +180,7 @@ export default function PurchaseForm({
           </div>
           <div className="purchase-grand-total">
             <span>Grand Total</span>
-            <strong>৳{money(totals.total)}</strong>
+            <strong>₹{money(totals.total)}</strong>
           </div>
         </div>
       </section>

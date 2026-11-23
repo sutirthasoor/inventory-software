@@ -36,7 +36,7 @@ const TAB_DEFS: { key: Tab; label: string }[] = [
 
 // Exact money format from the database contract.
 const money = (v: unknown): string =>
-  `৳${Number(v || 0).toLocaleString("en-BD", { minimumFractionDigits: 2 })}`;
+  `₹${Number(v || 0).toLocaleString("en-BD", { minimumFractionDigits: 2 })}`;
 
 const num = (v: unknown): number => Number(v || 0);
 
@@ -1076,7 +1076,7 @@ export default async function ReportsPage({
                       </td>
                       <td className="numeric">
                         <Link className="secondary-button pager-button" href={payHref(r)}>
-                          Pay ৳{r.outstanding.toFixed(0)}
+                          Pay ₹{r.outstanding.toFixed(0)}
                         </Link>
                       </td>
                     </tr>
@@ -1154,7 +1154,7 @@ export default async function ReportsPage({
                       </td>
                       <td className="numeric">
                         <Link className="secondary-button pager-button" href={payHref(r)}>
-                          Pay ৳{r.outstanding.toFixed(0)}
+                          Pay ₹{r.outstanding.toFixed(0)}
                         </Link>
                       </td>
                     </tr>

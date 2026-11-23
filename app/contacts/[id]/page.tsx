@@ -19,7 +19,7 @@ type LedgerRow = {
 };
 
 const money = (value: number) =>
-  `৳${Number(value || 0).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  `₹${Number(value || 0).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 function buildStatement(
   docs: { key: string; date: string; ref: string; href: string; status: string; amount: number }[],

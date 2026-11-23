@@ -1171,6 +1171,7 @@ grant execute on function public.purchase_outstanding(uuid) to authenticated;
 grant execute on function public.sale_outstanding(uuid) to authenticated;
 grant execute on function public.expense_outstanding(uuid) to authenticated;
 
+comment on function public.expense_outstanding(uuid) is 'Returns the outstanding amount for an expense.';
 comment on function public.confirm_purchase(uuid) is 'Atomically confirms a Draft purchase: validates lines, adds stock, records inventory/accounting entries, then marks Confirmed.';
 comment on function public.cancel_purchase(uuid) is 'Atomically cancels a Confirmed purchase: blocks active allocations, reverses stock and accounting through append-only entries, then marks Cancelled.';
 comment on function public.confirm_sale(uuid) is 'Atomically confirms a Draft sale: validates lines, locks/decrements stock without allowing negative balance, records inventory/accounting entries, then marks Confirmed.';
@@ -1181,4 +1182,4 @@ comment on function public.confirm_payment(uuid, jsonb) is 'Atomically confirms 
 comment on function public.cancel_payment(uuid) is 'Atomically cancels a Confirmed payment after validating its complete allocation and accounting ledger. Existing allocations remain as audit history but cease to count because outstanding sums only include Confirmed payments.';
 comment on function public.purchase_outstanding(uuid) is 'Returns confirmed payment allocation balance due for a Confirmed purchase.';
 comment on function public.sale_outstanding(uuid) is 'Returns confirmed payment allocation balance due for a Confirmed sale.';
-comment on function public.expense_outstanding(uuid);
+comment on function public.expense_outstanding(uuid) is 'Returns the outstanding amount for a Confirmed expense.';

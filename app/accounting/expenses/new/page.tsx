@@ -93,7 +93,7 @@ export default async function NewExpensePage({
               </label>
 
               <label>
-                Amount (৳) *
+                Amount (₹) *
                 <input
                   name="amount"
                   type="number"

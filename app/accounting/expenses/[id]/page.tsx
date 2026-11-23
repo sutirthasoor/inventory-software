@@ -26,7 +26,7 @@ export default async function ExpenseDetailPage({
   const query = await searchParams;
   const error = query.error ? decodeURIComponent(query.error) : "";
 
-  const orgName = organization?.organization_name || "Pomelo Inventory";
+  const orgName = organization?.organization_name || "NxtStock";
 
   const { data: expense, error: expenseError } = await supabase
     .from("expenses")
@@ -121,7 +121,7 @@ export default async function ExpenseDetailPage({
           <div className="summary-card">
             <span>Amount</span>
             <strong>
-              ৳{Number(expense.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{Number(expense.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </strong>
           </div>
           <div className="summary-card">

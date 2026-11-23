@@ -22,7 +22,7 @@ export default async function SaleDetailPage({
   const { id } = await params;
   const query = await searchParams;
 
-  const orgName = organization?.organization_name || "Pomelo Inventory";
+  const orgName = organization?.organization_name || "NxtStock";
 
   const { data: sale, error: saleError } = await supabase
     .from("sales")
@@ -287,19 +287,19 @@ export default async function SaleDetailPage({
           <div className="summary-card">
             <span>Total Amount</span>
             <strong>
-              ৳{Number(sale.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{Number(sale.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </strong>
           </div>
           <div className="summary-card">
             <span>Paid Amount</span>
             <strong>
-              ৳{paid.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{paid.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </strong>
           </div>
           <div className="summary-card">
             <span>Due Amount</span>
             <strong>
-              ৳{due.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{due.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </strong>
           </div>
         </section>
@@ -315,7 +315,7 @@ export default async function SaleDetailPage({
                 className="secondary-button"
                 href={`/accounting/payments/new?type=In&contact_id=${sale.contact_id}&sale_id=${sale.id}&amount=${due}`}
               >
-                + Receive Payment (৳{due.toFixed(2)})
+                + Receive Payment (₹{due.toFixed(2)})
               </Link>
             )}
           </div>
@@ -370,14 +370,14 @@ export default async function SaleDetailPage({
                         {Number(item.quantity).toLocaleString("en-BD", { maximumFractionDigits: 4 })}
                       </td>
                       <td className="numeric">
-                        ৳{Number(item.unit_price).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                        ₹{Number(item.unit_price).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                       </td>
                       <td className="numeric">
-                        ৳{Number(item.discount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                        ₹{Number(item.discount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                       </td>
                       <td className="numeric">
                         <strong>
-                          ৳{Number(item.line_total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                          ₹{Number(item.line_total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </strong>
                       </td>
                     </tr>
@@ -391,19 +391,19 @@ export default async function SaleDetailPage({
             <div>
               <span>Subtotal</span>
               <strong>
-                ৳{grossSubtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                ₹{grossSubtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </strong>
             </div>
             <div>
               <span>Discount</span>
               <strong>
-                − ৳{overallDiscount.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                − ₹{overallDiscount.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </strong>
             </div>
               <div className="purchase-grand-total">
               <span>Total</span>
               <strong>
-                ৳{Number(sale.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                ₹{Number(sale.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </strong>
             </div>
           </div>
@@ -459,7 +459,7 @@ export default async function SaleDetailPage({
                         </td>
                         <td className="numeric">
                           <strong>
-                            ৳{Number(alloc.allocated_amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                            ₹{Number(alloc.allocated_amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                           </strong>
                         </td>
                       </tr>

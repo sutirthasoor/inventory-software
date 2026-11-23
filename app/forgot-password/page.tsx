@@ -30,7 +30,7 @@ export default function ForgotPasswordPage() {
   return (
     <main className="auth-shell">
       <section className="auth-card">
-        <div className="auth-brand"><span className="brand-mark">P</span><span>Pomelo Inventory</span></div>
+        <div className="auth-brand"><span className="brand-mark">P</span><span>NxtStock</span></div>
         <p className="eyebrow">ACCOUNT RECOVERY</p>
         <h1>Reset your password</h1>
         <p className="muted">Enter your account email and we will send a secure reset link.</p>

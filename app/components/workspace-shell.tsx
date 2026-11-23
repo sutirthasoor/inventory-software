@@ -110,9 +110,8 @@ export default async function WorkspaceShell({ active, children }: Props) {
             </MobileNavDrawer>
           </div>
           <div className="brand">
-            <span className="brand-mark">P</span>
-            <span>Pomelo Inventory</span>
-          </div>
+  <span>NxtStock</span>
+</div>
         </div>
 
         <div className="global-header-workspace" title={organization?.organization_name || "Workspace"}>

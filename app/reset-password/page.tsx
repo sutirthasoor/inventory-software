@@ -39,7 +39,7 @@ export default function ResetPasswordPage() {
   return (
     <main className="auth-shell">
       <section className="auth-card">
-        <div className="auth-brand"><span className="brand-mark">P</span><span>Pomelo Inventory</span></div>
+        <div className="auth-brand"><span className="brand-mark">P</span><span>NxtStock</span></div>
         <p className="eyebrow">ACCOUNT RECOVERY</p>
         <h1>Choose a new password</h1>
         <p className="muted">Use at least 8 characters and keep the password unique to this account.</p>

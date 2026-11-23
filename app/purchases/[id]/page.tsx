@@ -22,7 +22,7 @@ export default async function PurchaseDetailPage({
   const { id } = await params;
   const query = await searchParams;
 
-  const orgName = organization?.organization_name || "Pomelo Inventory";
+  const orgName = organization?.organization_name || "NxtStock";
 
   const { data: purchase, error: purchaseError } = await supabase
     .from("purchases")
@@ -131,9 +131,9 @@ export default async function PurchaseDetailPage({
 
         <section className="summary-grid">
           <div className="summary-card"><span>Status</span><strong>{purchase.status}</strong></div>
-          <div className="summary-card"><span>Total</span><strong>৳{Number(purchase.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div>
-          <div className="summary-card"><span>Paid</span><strong>৳{paid.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div>
-          <div className="summary-card"><span>Due</span><strong>৳{due.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div>
+          <div className="summary-card"><span>Total</span><strong>₹{Number(purchase.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div>
+          <div className="summary-card"><span>Paid</span><strong>₹{paid.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div>
+          <div className="summary-card"><span>Due</span><strong>₹{due.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div>
         </section>
 
         <section className="data-card">
@@ -151,9 +151,9 @@ export default async function PurchaseDetailPage({
           <div className="table-scroll"><table className="spreadsheet-table"><thead><tr><th>Product</th><th className="numeric">Qty</th><th className="numeric">Unit price</th><th className="numeric">Discount</th><th className="numeric">Line total</th></tr></thead>
             <tbody>{items?.map((item) => {
               const product = Array.isArray(item.products) ? item.products[0] : item.products;
-              return <tr key={item.id}><td><strong>{product?.product_name || "—"}</strong></td><td className="numeric">{Number(item.quantity).toLocaleString("en-BD", { maximumFractionDigits: 4 })}</td><td className="numeric">৳{Number(item.unit_price).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td><td className="numeric">৳{Number(item.discount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td><td className="numeric"><strong>৳{Number(item.line_total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></td></tr>;
+              return <tr key={item.id}><td><strong>{product?.product_name || "—"}</strong></td><td className="numeric">{Number(item.quantity).toLocaleString("en-BD", { maximumFractionDigits: 4 })}</td><td className="numeric">₹{Number(item.unit_price).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td><td className="numeric">₹{Number(item.discount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td><td className="numeric"><strong>₹{Number(item.line_total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></td></tr>;
             })}</tbody></table></div>
-          <div className="purchase-total-card"><div><span>Subtotal</span><strong>৳{grossSubtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div><span>Discount</span><strong>− ৳{overallDiscount.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div className="purchase-grand-total"><span>Total</span><strong>৳{Number(purchase.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div></div>
+          <div className="purchase-total-card"><div><span>Subtotal</span><strong>₹{grossSubtotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div><span>Discount</span><strong>− ₹{overallDiscount.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div><div className="purchase-grand-total"><span>Total</span><strong>₹{Number(purchase.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong></div></div>
         </section>
 
         {purchase.notes && <section className="data-card"><p className="eyebrow">NOTES</p><p>{purchase.notes}</p></section>}

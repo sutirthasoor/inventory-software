@@ -82,7 +82,7 @@ export default async function SalesPage({ searchParams }: { searchParams: Promis
       <section className="summary-grid">
         <div className="summary-card">
           <span>Confirmed Revenue</span>
-          <strong>৳{confirmedSalesTotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+          <strong>₹{confirmedSalesTotal.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
         </div>
         <div className="summary-card">
           <span>Confirmed Invoices</span>
@@ -168,7 +168,7 @@ export default async function SalesPage({ searchParams }: { searchParams: Promis
                       <td>{contact?.name || "—"}</td>
                       <td className="numeric">
                         <strong>
-                          ৳{Number(sale.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                          ₹{Number(sale.total).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </strong>
                       </td>
                       <td>

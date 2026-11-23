@@ -129,19 +129,19 @@ export default async function AccountingPage({
         <div className="summary-card">
           <span>Total Received (In)</span>
           <strong style={{ color: "var(--success)" }}>
-            ৳{totalReceived.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            ₹{totalReceived.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </strong>
         </div>
         <div className="summary-card">
           <span>Total Paid Out (Out)</span>
           <strong style={{ color: "var(--primary-dark)" }}>
-            ৳{totalPaidOut.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            ₹{totalPaidOut.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </strong>
         </div>
         <div className="summary-card">
           <span>Confirmed Expenses</span>
           <strong style={{ color: "var(--danger)" }}>
-            ৳{totalConfirmedExpenses.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            ₹{totalConfirmedExpenses.toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </strong>
         </div>
         <div className="summary-card">
@@ -229,7 +229,7 @@ export default async function AccountingPage({
                       <td>{contact?.name || "—"}</td>
                       <td className="numeric">
                         <strong>
-                          ৳{Number(p.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                          ₹{Number(p.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </strong>
                       </td>
                       <td>{p.payment_method}</td>
@@ -309,7 +309,7 @@ export default async function AccountingPage({
                       <td>{e.description}</td>
                       <td className="numeric">
                         <strong>
-                          ৳{Number(e.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                          ₹{Number(e.amount).toLocaleString("en-BD", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </strong>
                       </td>
                       <td>
@@ -418,8 +418,8 @@ export default async function AccountingPage({
                   <SortableHeader label="Description" field="description" sort={ledgerSort} direction={direction} basePath="/accounting" params={{ tab: "ledger" }} />
                   <SortableHeader label="Reference" field="reference_type" sort={ledgerSort} direction={direction} basePath="/accounting" params={{ tab: "ledger" }} />
                   <th>Contact</th>
-                  <SortableHeader label="Debit (৳)" field="debit" sort={ledgerSort} direction={direction} basePath="/accounting" params={{ tab: "ledger" }} className="numeric" />
-                  <SortableHeader label="Credit (৳)" field="credit" sort={ledgerSort} direction={direction} basePath="/accounting" params={{ tab: "ledger" }} className="numeric" />
+                  <SortableHeader label="Debit (₹)" field="debit" sort={ledgerSort} direction={direction} basePath="/accounting" params={{ tab: "ledger" }} className="numeric" />
+                  <SortableHeader label="Credit (₹)" field="credit" sort={ledgerSort} direction={direction} basePath="/accounting" params={{ tab: "ledger" }} className="numeric" />
                 </tr>
               </thead>
               <tbody>
@@ -446,7 +446,7 @@ export default async function AccountingPage({
                       <td>{contact?.name || "—"}</td>
                       <td className="numeric">
                         {Number(t.debit) > 0 ? (
-                          <strong>৳{Number(t.debit).toLocaleString("en-BD", { minimumFractionDigits: 2 })}</strong>
+                          <strong>₹{Number(t.debit).toLocaleString("en-BD", { minimumFractionDigits: 2 })}</strong>
                         ) : (
                           "—"
                         )}
@@ -454,7 +454,7 @@ export default async function AccountingPage({
                       <td className="numeric">
                         {Number(t.credit) > 0 ? (
                           <strong style={{ color: "var(--success)" }}>
-                            ৳{Number(t.credit).toLocaleString("en-BD", { minimumFractionDigits: 2 })}
+                            ₹{Number(t.credit).toLocaleString("en-BD", { minimumFractionDigits: 2 })}
                           </strong>
                         ) : (
                           "—"

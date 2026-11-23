@@ -134,20 +134,20 @@ export default function PaymentAllocator({
       >
         <div style={{ display: "flex", gap: "16px", fontSize: "12px" }}>
           <div>
-            Payment Amount: <strong>৳{paymentAmount.toFixed(2)}</strong>
+            Payment Amount: <strong>₹{paymentAmount.toFixed(2)}</strong>
           </div>
           <div>
-            Allocated: <strong style={{ color: isBalanced ? "var(--success)" : "#b45309" }}>৳{totalAllocated.toFixed(2)}</strong>
+            Allocated: <strong style={{ color: isBalanced ? "var(--success)" : "#b45309" }}>₹{totalAllocated.toFixed(2)}</strong>
           </div>
           <div>
             Remaining to Allocate:{" "}
             <strong style={{ color: diff === 0 ? "var(--success)" : "var(--danger)" }}>
-              ৳{diff.toFixed(2)}
+              ₹{diff.toFixed(2)}
             </strong>
           </div>
         </div>
         <span className={isBalanced ? "allocated-tag" : "unallocated-tag"}>
-          {isBalanced ? "✓ Ready to Confirm" : `Needs ৳${Math.abs(diff).toFixed(2)} ${diff > 0 ? "more" : "less"}`}
+          {isBalanced ? "✓ Ready to Confirm" : `Needs ₹${Math.abs(diff).toFixed(2)} ${diff > 0 ? "more" : "less"}`}
         </span>
       </div>
 
@@ -160,7 +160,7 @@ export default function PaymentAllocator({
               <th className="numeric">Invoice Total</th>
               <th className="numeric">Outstanding Due</th>
               <th className="numeric" style={{ width: "160px" }}>
-                Allocate Amount (৳)
+                Allocate Amount (₹)
               </th>
               <th style={{ width: "80px" }}>Action</th>
             </tr>
@@ -177,9 +177,9 @@ export default function PaymentAllocator({
                     </strong>
                   </td>
                   <td>{c.date}</td>
-                  <td className="numeric">৳{c.total.toFixed(2)}</td>
+                  <td className="numeric">₹{c.total.toFixed(2)}</td>
                   <td className="numeric">
-                    <strong style={{ color: "var(--danger)" }}>৳{c.outstanding.toFixed(2)}</strong>
+                    <strong style={{ color: "var(--danger)" }}>₹{c.outstanding.toFixed(2)}</strong>
                   </td>
                   <td className="numeric">
                     <input

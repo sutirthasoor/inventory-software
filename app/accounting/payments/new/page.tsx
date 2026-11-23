@@ -123,7 +123,7 @@ export default async function NewPaymentPage({
               </label>
 
               <label>
-                Amount (৳) *
+                Amount (₹) *
                 <input
                   name="amount"
                   type="number"
